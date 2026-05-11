@@ -12,6 +12,7 @@ int main(){
     float Densidade_Populacional1;
     float PIB_per_capita1;
     float Super_Poder1; // NOVO
+    float pontuacao_carta1 = populacao1 + pib1 + area1; // NOVO
 
     //variaveis carta 02//
     char estado2;
@@ -24,6 +25,7 @@ int main(){
     float Densidade_Populacional2;
     float PIB_per_capita2;
     float Super_Poder2; // NOVO
+    float pontuacao_carta2 = populacao2 + pib2 + area2; // NOVO
 
     // coleta de dados carta 01 //
     printf("Carta 1:\n ");
@@ -130,6 +132,17 @@ int main(){
     printf("Densidade Populacional: Carta 1 venceu (%d)\n", Densidade_Populacional1 < Densidade_Populacional2);
     printf("PIB per Capita: Carta 1 venceu (%d)\n", PIB_per_capita1 > PIB_per_capita2);
     printf("Super Poder: Carta 1 venceu (%d)\n", Super_Poder1 > Super_Poder2);
+
+    // usando if e else para determinar o vencedor geral
+
+    if (pontuacao_carta1 > pontuacao_carta2) {
+        printf("Carta 1 é a vencedora geral!\n");
+    } else if (pontuacao_carta1 < pontuacao_carta2) {
+        printf("Carta 2 é a vencedora geral!\n");
+    } 
+    
+
+
 
     return 0;
 }
